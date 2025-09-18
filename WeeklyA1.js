@@ -37,7 +37,9 @@ function question(x, y){
     if(isNaN(input)){
         if(input === "skip"){
             lives --;
-            console.log(`You have (${lives}/3) lives left.`);
+            if(gamemode === "2"){
+                console.log(`You have (${lives}/3) lives left.`);
+            }
             return "Next Question";
         }
         else{
